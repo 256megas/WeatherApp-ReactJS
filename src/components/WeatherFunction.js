@@ -33,8 +33,8 @@ const WeatherFunction = (props) => {
   const getCoords = (e) => {
     window.navigator.geolocation.watchPosition((position) => {
       setMyCoords({
-        lat: position.coords.latitude,
-        lon: position.coords.longitude,
+        lat: position.coords.latitude.toFixed(4),
+        lon: position.coords.longitude.toFixed(4),
       });
     });
   };
